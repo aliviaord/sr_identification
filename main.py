@@ -44,9 +44,6 @@ if __name__ == "__main__":
     # Seleccionamos el primer destino del listado de sugeridos
     driver.find_elements_by_class_name('c-autocomplete__item')[0].click()
 
-    # Pasamos una página del calendario
-    driver.find_elements_by_class_name('bui-calendar__control--next')[0].click()
-
     # Seleccionamos día de ida y de vuelta
     driver.find_elements_by_class_name('bui-calendar__date')[fecha_inicio].click()
     driver.find_elements_by_class_name('bui-calendar__date')[fecha_fin].click()
@@ -60,9 +57,12 @@ if __name__ == "__main__":
     body_booking = driver.execute_script("return document.body")
     source_booking = body_booking.get_attribute('innerHTML')
 
-    # Obtenemos la sopa
-    soup_booking = BeautifulSoup(source_booking, 'lxml')
+    # Obtenemos la sopa y guardamos el html de la web en un archivo
+    soup_booking = BeautifulSoup(source_booking, 'lxml', from_encoding="utf8")
+    with open("./webpages/web_booking.html", mode="w", encoding="utf8") as f:
+        f.write(str(soup_booking.prettify()))
 
+    # Guardamos los divs y sus características en un archivo csv
     df_booking = get_complete_dataframe(soup_booking.find_all("div"), driver, "booking")
     if df_booking is not None:
         df_booking.to_csv("./dataframes/df_booking.csv", header=True)
@@ -117,9 +117,12 @@ if __name__ == "__main__":
     body_expedia = driver.execute_script("return document.body")
     source_expedia = body_expedia.get_attribute('innerHTML')
 
-    # Obtenemos la sopa
-    soup_expedia = BeautifulSoup(source_expedia, 'lxml')
+    # Obtenemos la sopa y guardamos el html de la web en un archivo
+    soup_expedia = BeautifulSoup(source_expedia, 'lxml', from_encoding="utf8")
+    with open("./webpages/web_expedia.html", mode="w", encoding="utf8") as code:
+        code.write(str(soup_expedia.prettify()))
 
+    # Guardamos los divs y sus características en un archivo csv
     df_expedia = get_complete_dataframe(soup_expedia.find_all("div"), driver, "expedia")
     if df_expedia is not None:
         df_expedia.to_csv("./dataframes/df_expedia.csv", header=True)
@@ -133,9 +136,7 @@ if __name__ == "__main__":
 
     # Acceso a la web correspondiente
     driver = Firefox(headless=True)
-    # options = Options()
-    # options.headless = True
-    # driver = webdriver.Firefox(options=options)
+    # driver = Firefox()
     driver.get('https://www.trivago.es/')
     driver.maximize_window()
     time.sleep(2)
@@ -162,7 +163,6 @@ if __name__ == "__main__":
     # Pasamos una página del calendario
     driver.find_elements_by_class_name('js-dealform-button-calendar')[0].click()
     driver.find_elements_by_class_name('cal-btn-next')[0].click()
-    driver.find_elements_by_class_name('cal-btn-next')[0].click()
     time.sleep(2)
 
     # Seleccionamos día de ida y de vuelta
@@ -179,9 +179,12 @@ if __name__ == "__main__":
     body_trivago = driver.execute_script("return document.body")
     source_trivago = body_trivago.get_attribute('innerHTML')
 
-    # Obtenemos la sopa
-    soup_trivago = BeautifulSoup(source_trivago, 'lxml')
+    # Obtenemos la sopa y guardamos el html de la web en un archivo
+    soup_trivago = BeautifulSoup(source_trivago, 'lxml', from_encoding="utf8")
+    with open("./webpages/web_trivago.html", mode="w", encoding="utf8") as code:
+        code.write(str(soup_trivago.prettify()))
 
+    # Guardamos los divs y sus características en un archivo csv
     df_trivago = get_complete_dataframe(soup_trivago.find_all("div"), driver, "trivago")
     if df_trivago is not None:
         df_trivago.to_csv("./dataframes/df_trivago.csv", header=True, index=True)

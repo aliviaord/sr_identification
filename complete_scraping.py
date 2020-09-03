@@ -32,7 +32,8 @@ if __name__ == "__main__":
 
         # Obtenemos la sopa
         soup_web = BeautifulSoup(source_web, 'lxml')
-
+        
+        # Guardamos los divs y sus características en un archivo csv
         df_web = get_complete_dataframe(soup_web.find_all("div"), driver, name)
         if df_web is not None:
             df_web.to_csv("./dataframes/df_" + name + ".csv", header=True)

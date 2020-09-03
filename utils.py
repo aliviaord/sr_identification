@@ -68,12 +68,10 @@ def get_complete_dataframe(soup, driver, web):
         'margin_top', 'margin_right', 'margin_bottom', 'margin_left',
         'is_search_result'])
 
-        xpaths_list = []
         for div in soup:
-            xpath = xpath_soup(div)
-            xpaths_list.append(xpath)
 
             try:
+                xpath = xpath_soup(div)
                 elem = driver.find_element_by_xpath(xpath)
 
                 reduced_xpath = ''.join([i for i in xpath if not i.isdigit()])
@@ -142,12 +140,10 @@ def get_basic_dataframe(soup, driver, web):
     'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 
     'margin_top', 'margin_right', 'margin_bottom', 'margin_left'])
 
-    xpaths_list = []
     for div in soup:
-        xpath = xpath_soup(div)
-        xpaths_list.append(xpath)
 
         try:
+            xpath = xpath_soup(div)
             elem = driver.find_element_by_xpath(xpath)
 
             reduced_xpath = ''.join([i for i in xpath if not i.isdigit()])
