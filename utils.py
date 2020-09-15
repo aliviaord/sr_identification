@@ -41,21 +41,11 @@ def xpath_soup(element):
 
 def get_complete_dataframe(soup, driver, web):
 
-    class_name_webs = {
-        "booking": r'\bsr_item\b',
-        "expedia": r'\bimagelayout-left-fullbleed\b',
-        "tripadvisor": r'\bresult-card\b',
-        "destinia": r'\bavailability_list_widget-hotel-card\b',
-        "atrapalo": r'\bcard-result-container\b',
-        "logitravel": r'\bmo-results-card-list\b',
-        "kayak": r'\bHotels-Results-HotelResultItem\b',
-        "skyscanner": r'\bHotelCardsListChunk_HotelCardsListChunk__card__2eXne\b'
-    }
+    with open('./inputs/class_name_webs.txt','r') as inf:
+        class_name_webs = eval(inf.read())
 
-    xpath_webs = {
-        "trivago": ["/html/body/div[]/main/div[]/div/div[]/div/div/div[]/div[]/div[]/section/ol/li[]/div",
-            "/html/body/div[]/main/div[]/div[]/div[]/div/div[]/div[]/div[]/div[]/section/ol/li[]/div"]
-    }
+    with open('./inputs/xpath_webs.txt','r') as inf:
+        xpath_webs = eval(inf.read())
 
     if web not in class_name_webs and web not in xpath_webs:
         print("The website you entered is not part of the accepted sites.")

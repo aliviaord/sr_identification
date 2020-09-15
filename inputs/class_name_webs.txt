@@ -1,0 +1,17 @@
+{
+    "booking": r'\bsr_item\b',
+    "expedia": r'\bimagelayout-left-fullbleed\b',
+    "tripadvisor": r'\blistItem\b',
+    "destinia": r'\bavailability_list_widget-hotel-card\b',
+    "atrapalo": r'\bcard-result-container\b',
+    "kayak": r'\bHotels-Results-HotelResultItem\b',
+    "skyscanner": r'\bHotelCardsListChunk_HotelCardsListChunk__card__2eXne\b',
+    "momondo": r'\bHotels-Results-HotelResultItem\b',
+    "agoda": r'\bJacketContent\b',
+    "omio": r'\bContainer_container_98308\b',
+    "milanuncios": r'\baditem \b',
+    "ebay": r'\bs-item__wrapper\b',
+    "mediamarkt": r'\bproduct-wrapper\b',
+    "fotocasa": r'\bre-Searchresult-itemRow\b',
+    "changeorg": r'\bsearch-result\b',
+}

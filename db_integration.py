@@ -31,17 +31,19 @@ if __name__ == "__main__":
 
         try:
             # Obtenemos las características necesarias del hotel
-            name = matching_div.cssselect('span.sr-hotel__name')[0].text_content().strip()
+            
+            name = matching_div.xpath(".//div[2]/div[1]/div[1]/div[1]/h3/a/span[1]")[0].text_content().strip()
 
-            location = matching_div.cssselect('a.bui-link')[0].text_content().replace('Mostrar en el mapa', '').strip()
+            location = matching_div.xpath(".//div[2]/div[1]/div[1]/div[2]/a")[0].text_content().replace('Mostrar en el mapa', '').strip()
 
-            nights = matching_div.cssselect('div.bui-price-display__label.prco-inline-block-maker-helper')[0].text_content().split(',')[0]
+            
+            nights = matching_div.xpath(".//div[2]/div[3]/div/div/div/div/div[2]/div[1]/div[1]/div")[0].text_content().split(',')[0]
             nights = ''.join([i for i in nights if i.isdigit()]).strip()
 
-            price = matching_div.cssselect('div.bui-price-display__value.prco-inline-block-maker-helper')[0].text_content()
+            price = matching_div.xpath(".//div[2]/div[3]/div/div/div/div/div[2]/div[1]/div[2]/div/span")[0].text_content()
             price = ''.join([i for i in price if i.isdigit()]).strip()
 
-            image = matching_div.cssselect('img.hotel_image')[0].xpath('@src')[0].strip()
+            image = matching_div.xpath(".//div[1]/a/img")[0].xpath('@src')[0].strip()
 
             # Creamos un objeto con las características del nuevo hotel
             new_hotel = {
@@ -80,22 +82,22 @@ if __name__ == "__main__":
 
         try:
             # Obtenemos las características necesarias del hotel
-            name = matching_div.cssselect('h3')[0].text_content().strip()
+            name = matching_div.xpath(".//div/div[1]/h3")[0].text_content().strip()
 
-            location = matching_div.cssselect('div.overflow-wrap.uitk-spacing.uitk-spacing-padding-blockend-two.uitk-text-secondary-theme')[0].text_content().strip()
+            location = matching_div.xpath(".//div/div[1]/div/div/div[2]")[0].text_content().strip()
 
-            nights = matching_div.cssselect('div.pwa-theme--grey-700.uitk-type-100.uitk-type-regular')[0].text_content()
+            nights = matching_div.xpath(".//div/div[2]/div/div[2]/div/div/div[2]/div")[0].text_content()
             nights = ''.join([i for i in nights if i.isdigit()]).strip()
 
-            price = matching_div.cssselect('span.uitk-cell.loyalty-display-price.all-cell-shrink')[1].text_content()
+            price = matching_div.xpath(".//div/div[2]/div/div[2]/div/div/div[1]/span/span[2]")[0].text_content()
             price = ''.join([i for i in price if i.isdigit()]).strip()
 
             image = ""
 
             try:
-                image = matching_div.cssselect('img.uitk-image-media')[1].xpath('@src')[0].strip()
+                image = matching_div.xpath(".//section/div/span/div[1]/div/div[2]/figure/div/img")[0].xpath('@src')[0].strip()
             except Exception as e:
-                print(e)
+                print("Image not shown")
             
             # Creamos un objeto con las características del nuevo hotel
             new_hotel = {
@@ -134,11 +136,12 @@ if __name__ == "__main__":
 
         try:
             # Obtenemos las características necesarias del hotel
-            name = matching_div.cssselect('span.item-link.name__copytext.name__copytext--small')[0].text_content().strip()
+            
+            name = matching_div.xpath(".//article/div[1]/div[2]/div/div/h3/span")[0].text_content().strip()
 
-            location = matching_div.cssselect('p.details-paragraph.details-paragraph--location.location-details')[0].text_content().strip()
+            location = matching_div.xpath(".//article/div[1]/div[2]/div/div/div[2]/div/p")[0].text_content().strip()
 
-            nights_and_price = matching_div.xpath(".//em[@data-qa='price-per-stay']")[0].text_content()
+            nights_and_price = matching_div.xpath(".//article/div[1]/div[2]/section/div[1]/article/div/p/em[2]")[0].text_content()
 
             nights = nights_and_price.split('noches')[0]
             nights = ''.join([i for i in nights if i.isdigit()]).strip()
@@ -146,7 +149,7 @@ if __name__ == "__main__":
             price = nights_and_price.split('noches')[1]
             price = ''.join([i for i in price if i.isdigit()]).strip()
 
-            image = matching_div.cssselect('div.lazy-image__image-wrapper')[0].xpath('./meta[3]')[0].attrib['content']
+            image = matching_div.xpath(".//article/div[1]/div[1]/div[2]/div/meta[3]")[0].attrib['content']
 
             # Creamos un objeto con las características del nuevo hotel
             new_hotel = {

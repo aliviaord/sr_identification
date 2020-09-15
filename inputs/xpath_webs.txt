@@ -1,0 +1,10 @@
+{
+    "trivago": ["/html/body/div[]/main/div[]/div/div[]/div/div/div[]/div[]/div[]/section/ol/li[]/div",
+        "/html/body/div[]/main/div[]/div[]/div[]/div/div[]/div[]/div[]/div[]/section/ol/li[]/div",
+        "/html/body/div[]/main/div[]/div[]/div[]/div/div[]/div[]/div[]/div/section/ol/li[]/div"],
+    
+    "youtube": ["/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[]/ytd-item-section-renderer/div[]/ytd-shelf-renderer[]/div[]/div[]/ytd-vertical-list-renderer/div[]/ytd-video-renderer[]/div[]",
+        "/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[]/ytd-item-section-renderer/div[]/ytd-video-renderer[]/div[]"],
+
+    "reddit": ["/html/body/div[]/div/div[]/div[]/div/div/div/div[]/div[]/div[]/div[]/div[]"]
+}
