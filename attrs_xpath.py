@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     website_name = "booking"
 
-    df_res = pd.read_csv('./webpages/res_' + website_name + '.csv', index_col = 0)
+    df_res = pd.read_csv('./dataframes/res_' + website_name + '.csv', index_col = 0)
     sr_xpaths = df_res.xpath.tolist()
 
     soup = BeautifulSoup(open('./webpages/web_' + website_name + '.html', mode = "r", encoding = "utf8"), "html.parser")

@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     # Abrimos el fichero que contiene los xpaths de los clasificados como
     # resultados de búsqueda
-    booking_df_res = pd.read_csv('./webpages/res_booking.csv', index_col=0)
+    booking_df_res = pd.read_csv('./dataframes/res_booking.csv', index_col=0)
 
     print("Hotels in DB before Booking inserts: " + str(records.count_documents({})))
 
@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
     # Abrimos el fichero que contiene los xpaths de los clasificados como
     # resultados de búsqueda
-    expedia_df_res = pd.read_csv('./webpages/res_expedia.csv', index_col=0)
+    expedia_df_res = pd.read_csv('./dataframes/res_expedia.csv', index_col=0)
 
     print("Hotels in DB before Expedia inserts: " + str(records.count_documents({})))
 
@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
     # Abrimos el fichero que contiene los xpaths de los clasificados como
     # resultados de búsqueda
-    trivago_df_res = pd.read_csv('./webpages/res_trivago.csv', index_col=0)
+    trivago_df_res = pd.read_csv('./dataframes/res_trivago.csv', index_col=0)
 
     print("Hotels in DB before Trivago inserts: " + str(records.count_documents({})))
 

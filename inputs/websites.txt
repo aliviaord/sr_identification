@@ -1,7 +1,4 @@
 {
-    "booking": "https://www.booking.com/searchresults.es.html?aid=397594&label=gog235jc-1DCAEoggI46AdIClgDaEaIAQGYAQq4ARfIAQzYAQPoAQH4AQKIAgGoAgO4AunV3foFwAIB0gIkY2M3NDc4YjctM2UyMi00YzFlLTgyODQtOWNlY2ViOTkyZGM42AIE4AIB&sid=1220faced58f9f2f9347bd8d5f7b355d&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.es.html%3Faid%3D397594%3Blabel%3Dgog235jc-1DCAEoggI46AdIClgDaEaIAQGYAQq4ARfIAQzYAQPoAQH4AQKIAgGoAgO4AunV3foFwAIB0gIkY2M3NDc4YjctM2UyMi00YzFlLTgyODQtOWNlY2ViOTkyZGM42AIE4AIB%3Bsid%3D1220faced58f9f2f9347bd8d5f7b355d%3Bsb_price_type%3Dtotal%26%3B&ss=A+Coru%C3%B1a%2C+Galicia%2C+Espa%C3%B1a&is_ski_area=&checkin_year=2020&checkin_month=10&checkin_monthday=5&checkout_year=2020&checkout_month=10&checkout_monthday=25&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&ss_raw=a+coru&ac_position=0&ac_langcode=es&ac_click_type=b&dest_id=-386792&dest_type=city&iata=LCG&place_id_lat=43.371376&place_id_lon=-8.395612&search_pageview_id=32eb50b4963d01b2&search_selected=true&search_pageview_id=32eb50b4963d01b2&ac_suggestion_list_length=5&ac_suggestion_theme_list_length=0",
-    "trivago": "https://www.trivago.es/?aDateRange%5Barr%5D=2020-10-05&aDateRange%5Bdep%5D=2020-10-25&aPriceRange%5Bfrom%5D=0&aPriceRange%5Bto%5D=0&iRoomType=7&aRooms%5B0%5D%5Badults%5D=2&cpt2=315876%2F200&hasList=1&hasMap=0&bIsSeoPage=0&sortingId=1&slideoutsPageItemId=&iGeoDistanceLimit=20000&address=&addressGeoCode=&offset=0&ra=&overlayMode=",
-    "expedia": "https://www.expedia.es/Hotel-Search?adults=2&d1=2020-10-05&d2=2020-10-25&destination=La%20Coru%C3%B1a%2C%20Galicia%2C%20Espa%C3%B1a&endDate=2020-10-25&latLong=43.371498%2C-8.39773&regionId=2028&rooms=1&semdtl=&sort=RECOMMENDED&startDate=2020-10-05&theme=&useRewards=false&userIntent",
     "tripadvisor": "https://www.tripadvisor.es/Hotels-g187507-La_Coruna_Province_of_A_Coruna_Galicia-Hotels.html",
     "destinia": "https://online.destinia.com/online/hotels/search?date_unix=1599564873520410001&sortType=bestbuy",
     "atrapalo": "https://www.atrapalo.com/hoteles/results/eff079579421951a99693159233edf64/1:10:0:0:bd255/",
@@ -15,7 +12,6 @@
     "ebay": "https://www.ebay.es/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=switch&_sacat=0",
     "mediamarkt": "https://www.mediamarkt.es/es/search.html?query=switch&searchProfile=onlineshop&channel=mmeses",
     "reddit": "https://www.reddit.com/search/?q=switch",
-    "fotocasa": "https://www.fotocasa.es/es/comprar/viviendas/a-coruna-capital/mesoiro/l?latitude=43.323&longitude=-8.4304",
     "filmaffinity": "https://www.filmaffinity.com/es/search.php?stype=cast&stext=meryl%20streep",
     "changeorg": "https://www.change.org/search?q=huelva"
 }

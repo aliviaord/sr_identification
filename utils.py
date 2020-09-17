@@ -53,7 +53,8 @@ def get_complete_dataframe(soup, driver, web):
 
     else:
         print("----------------------- GETTING " + web.upper() + " DATAFRAME -----------------------")
-        df = pd.DataFrame(columns=['xpath', 'reduced_xpath', 'dom_tree_level', 'x_position', 'y_position', 'height', 'width', 'html_children', 'html_attributes',
+        df = pd.DataFrame(columns=['xpath', 'reduced_xpath', 'dom_tree_level',
+        'x_position', 'y_position', 'height', 'width', 'html_children', 'html_attributes',
         'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 
         'margin_top', 'margin_right', 'margin_bottom', 'margin_left',
         'is_search_result'])
@@ -112,7 +113,8 @@ def get_complete_dataframe(soup, driver, web):
                 # tamaño sea menor a 75x75px (aprox 2cm) y cuya posición en pantalla tenga coordenadas
                 # negativas.
                 if height >= 75 and width >= 75 and x_position >= 0 and y_position >= 0:
-                    df.loc[len(df)] = [xpath, reduced_xpath, dom_tree_level, x_position, y_position, height, width, html_children, html_attributes,
+                    df.loc[len(df)] = [xpath, reduced_xpath, dom_tree_level, 
+                    x_position, y_position, height, width, html_children, html_attributes,
                     padding_top, padding_right, padding_bottom, padding_left,
                     margin_top, margin_right, margin_bottom, margin_left,
                     is_search_result]
